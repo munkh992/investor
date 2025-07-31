@@ -1,0 +1,31 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00B86B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00D97F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle background -->
+  <circle cx="100" cy="100" r="90" fill="url(#logoGradient)" stroke="url(#borderGradient)" stroke-width="4"/>
+  
+  <!-- TDB text -->
+  <text x="100" y="110" font-family="Arial, sans-serif" font-size="48" font-weight="bold" 
+        fill="white" text-anchor="middle" dominant-baseline="middle">TDB</text>
+  
+  <!-- Green Bank subtitle -->
+  <text x="100" y="140" font-family="Arial, sans-serif" font-size="12" font-weight="600" 
+        fill="#00D97F" text-anchor="middle" dominant-baseline="middle">GREEN BANK</text>
+  
+  <!-- Decorative leaf elements -->
+  <g transform="translate(60, 60)">
+    <path d="M10 5 Q15 0 20 5 Q15 10 10 5" fill="#00B86B" opacity="0.7"/>
+  </g>
+  <g transform="translate(120, 60)">
+    <path d="M10 5 Q15 0 20 5 Q15 10 10 5" fill="#00B86B" opacity="0.7"/>
+  </g>
+</svg>

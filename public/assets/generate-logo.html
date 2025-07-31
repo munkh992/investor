@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TDB Logo Generator</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            background: #f0f0f0; 
+        }
+        .logo-container { 
+            text-align: center; 
+            padding: 40px; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        button {
+            background: linear-gradient(135deg, #00B86B, #00D97F);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <h1>TDB Bank Logo Generator</h1>
+        <div class="logo">TDB</div>
+        <canvas id="logoCanvas" width="512" height="512"></canvas>
+        <br>
+        <button onclick="generateLogo()">Generate Logo</button>
+        <button onclick="downloadLogo()">Download PNG</button>
+        
+        <script>
+            function generateLogo() {
+                const canvas = document.getElementById('logoCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Clear canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Create gradient background
+                const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                gradient.addColorStop(0, '#1e3a8a');
+                gradient.addColorStop(1, '#1d4ed8');
+                
+                // Draw circle background
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(canvas.width/2, canvas.height/2, canvas.width/2 - 20, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                // Add border
+                ctx.strokeStyle = '#00B86B';
+                ctx.lineWidth = 8;
+                ctx.stroke();
+                
+                // Draw TDB text
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 120px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('TDB', canvas.width/2, canvas.height/2);
+                
+                // Add subtitle
+                ctx.font = '24px Arial';
+                ctx.fillStyle = '#00D97F';
+                ctx.fillText('GREEN BANK', canvas.width/2, canvas.height/2 + 80);
+            }
+            
+            function downloadLogo() {
+                const canvas = document.getElementById('logoCanvas');
+                const link = document.createElement('a');
+                link.download = 'tdb-logo.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            }
+            
+            // Generate logo on page load
+            generateLogo();
+        </script>
+    </div>
+</body>
+</html>
