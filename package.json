@@ -28,10 +28,10 @@
     "typescript": "^5.2.2",
     "vite": "^4.4.9"
   },
-  "homepage": "https://yourusername.github.io/tdb-investor-relations",
+  "homepage": "https://munkh992.github.io/investor",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/tdb-investor-relations.git"
+    "url": "git+https://github.com/yourusername/investor.git"
   },
   "keywords": [
     "investor-relations",
