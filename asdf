@@ -1,0 +1,12 @@
+echo 'export PYTHONUSERBASE=/mnt/data/pip-packages' >> ~/.bashrc
+echo 'export PIPX_HOME=/mnt/data/pipx' >> ~/.bashrc
+echo 'export PIPX_BIN_DIR=/mnt/data/pipx/bin' >> ~/.bashrc
+echo 'export PATH="/mnt/data/pip-packages/bin:/mnt/data/pipx/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+
+python3 -m pip install --user pipx
+~/.local/bin/pipx reinstall-all
+which pipx
+which <tool-you-installed>  # e.g. black, httpie, ruff
+pipx list
