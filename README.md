@@ -1,1 +1,87 @@
-"Dummy Bank Statement<br><br>Bank Name: People's Trust Bank  Customer Name: John A. Doe  Account Number: 123- 456- 789  Statement Period: July 1, 2023 - July 31, 2023  Address: 123 Maple Street, Anytown, AT 12345<br><br>Account Summary<br><br>Opening Balance: \\(5,000.00 Closing Balance:\\) 4,250.00<br><br>Transactions<br><br><table><tr><td>Date</td><td>Description</td><td>Withdrawals</td><td>Deposits</td><td>Balance</td></tr><tr><td>07/01/2023</td><td>Opening Balance</td><td>-</td><td>-</td><td>$5,000.00</td></tr><tr><td>07/02/2023</td><td>Electric Bill Payment</td><td>$250.00</td><td>-</td><td>$4,750.00</td></tr><tr><td>07/05/2023</td><td>Grocery Store</td><td>$150.00</td><td>-</td><td>$4,600.00</td></tr><tr><td>07/08/2023</td><td>Salary Deposit</td><td>-</td><td>$1,000.00</td><td>$5,600.00</td></tr><tr><td>07/12/2023</td><td>Online Shopping - Z-Mart</td><td>$100.00</td><td>-</td><td>$5,500.00</td></tr><tr><td>07/15/2023</td><td>Cash Withdrawal - ATM</td><td>$200.00</td><td>-</td><td>$5,300.00</td></tr></table>\n\n---\n\n<table><tr><td>07/18/2023</td><td>Car Insurance Premium</td><td>$350.00</td><td>-</td><td>$4,950.00</td></tr><tr><td>07/22/2023</td><td>Coffee Shop</td><td>$20.00</td><td>-</td><td>$4,930.00</td></tr><tr><td>07/25/2023</td><td>Gas Station</td><td>$50.00</td><td>-</td><td>$4,880.00</td></tr><tr><td>07/28/2023</td><td>Water Bill Payment</td><td>$300.00</td><td>-</td><td>$4,580.00</td></tr><tr><td>07/30/2023</td><td>Gym Membership Fee</td><td>$80.00</td><td>-</td><td>$4,500.00</td></tr><tr><td>07/31/2023</td><td>Movie Streaming Service Subscription</td><td>$50.00</td><td>-</td><td>$4,450.00</td></tr><tr><td>07/31/2023</td><td>Monthly Maintenance Fee</td><td>$200.00</td><td>-</td><td>$4,250.00</td></tr></table><br><br>Fees & Charges<br><br>\u00b7Monthly Maintenance Fee: &#36;200.00<br><br>\u00b7ATM Withdrawal Fee (non-network): Included in transactions<br><br>Notes:<br><br>\u00b7Keep your bank statement for your records.<br><br>\u00b7Review your statement regularly to monitor your account activity.<br><br>\u00b7Contact People's Trust Bank immediately if you notice any unauthorized transactions.
+"The following fields will process through FCM.    
+
+|  | Requirement |  | Requirement Title | Summary Description |
+| --- | --- | --- | --- | --- |
+|  | Reference |  |  |  |
+| Requirement CU_01_01 |  |  | Format and validation of customer registration field | The registration fields and their formats change according to customer type. The two main categories: individual / entity |
+| Requirement CU_01_02 |  |  |  | Some selection fields should be shorter and easier to read and understands large size sections are divided into smal size sections |
+| Requirement CU_02 |  |  | Image fields change according to image type. | The Bank records signature of the person who has the right to authorise payments or approve other activities related to a particular account |
+| Requirement CU_03 |  |  | To remind to update customer information | The relationship manager responsible for the Customer, and/or Bank teller in the case where Customer submits request in Bank branch. When the officer opens an account, field will appear to check whether the information has changed |
+| Requirement CU_04_01 |  |  | Capture and upload ID card reader usage information for customer activity | Read the information on ID card issued by the National Registration General Department to search the customer from the Bank’s registration database and to register the information |
+|  |  |  |  | If customer’s information is different from the Bank’s registration, update and save the new information |
+| Requirement CU_04_02 |  |  |  | Verify information of the customer who is making the transaction against the information of the bank account holder |
+|  |  |  |  | Automatically fill in customer information in the transaction screen |
+|  |  |  |  | Create log for the usage of digital ID card when making a transaction in the activity log. |
+| Requirement CU_05 |  |  | Classification of the customer into economically Mongolian citizens and foreign citizens. | In the customer registration of the T24 system, organizations and individual customers will be classified as Economically citizen and non-Economically citizen based on their segment code and other using product and services. |
+
+ 
+ 
+Types 
+Mandatory fields 
+Non-cooperative and 
+high-risk country rule 
+Screening 
+Individual 
+
+# 1. First name 
+
+  
+Sanctions, PEP 
+and private list 
+screening 
+
+# 2. Last name 
+
+# 3. Date of birth 
+
+# 4. ID number 
+
+# 5. Nationality 
+
+Country rule 
+
+# 6. Country of Birth  
+
+Entity 
+
+# 1. Name 
+
+  
+Sanctions, PEP 
+and private list 
+screening 
+
+# 2. ID number 
+
+# 3. Relationship 
+
+# 4. Shareholders’ name 
+
+# 5. Shareholders’ registered country/nationality 
+
+Country rule 
+
+# 6. Ultimate beneficial owners name 
+
+ 
+
+# 7. UBOs' nationality 
+
+Country rule 
+
+# 8. UBOs' date of birth 
+
+ 
+
+# 9. CEO's name 
+
+  
+10 
+CEO's nationality 
+Country rule 
+11 
+CEO's ID number 
+ 
+12 
+CEO's date of birth"
+![Uploading image.png…]()
